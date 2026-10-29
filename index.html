@@ -470,8 +470,8 @@ const ROOMS = [
 const AMEN = [['aircon','벽걸이 에어컨'],['fridge','투도어 냉장고'],['washer','LG 드럼세탁기'],['bath','개인 욕실'],['window','외부 창문'],
               ['microwave','전자레인지'],['tv','TV'],['mirror-door','전신 거울'],['doorlock','디지털 도어락'],['wifi','기가 와이파이']];
 // [사진 번호, 설명] — 9장이면 PC 4칸·휴대폰 2칸 격자가 빈칸 없이 딱 맞음
-const COMMON = [[1,'복도 라운지'],[5,'24시간 공용 주방'],[8,'테라스'],[7,'대용량 건조기'],[6,'세탁 공간'],
-                [2,'복도'],[3,'객실 복도'],[4,'휴게 공간'],[10,'건물 입구']];
+const COMMON = [[1,'복도 라운지'],[5,'24시간 공용 주방'],[8,'테라스'],[7,'대용량 건조기'],[6,'공용 주방'],
+                [2,'복도'],[3,'객실 복도'],[4,'복도'],[10,'건물 입구']];
 const src = (k,n,w) => `images/${k}-${String(n).padStart(2,'0')}-${w}.jpg`;
 const srcset = (k,n) => `${src(k,n,800)} 800w, ${src(k,n,1600)} 1600w`;
 const KAKAO = 'https://pf.kakao.com/_PXVxfn/chat';
@@ -498,7 +498,7 @@ ROOMS.forEach((r,ri) => {
       <p class="desc">${r.desc}</p>
       <ul class="points">${r.points.map(p=>`<li>${p}</li>`).join('')}</ul>
       <div class="room-actions">
-        <button class="btn btn-line" type="button" data-open>사진 ${r.count}장 보기</button>
+        <button class="btn btn-line" type="button" data-open>사진 보기</button>
         <a class="btn btn-kakao" href="${KAKAO}" target="_blank" rel="noopener">이 방 문의</a>
       </div>
     </div>`;
