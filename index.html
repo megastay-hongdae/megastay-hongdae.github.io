@@ -559,5 +559,12 @@ document.getElementById('copyAddr').onclick = async (e) => {
   try { await navigator.clipboard.writeText('서울시 마포구 성미산로 193'); e.target.textContent='복사됐어요'; setTimeout(()=>e.target.textContent='주소 복사',1500); } catch(_) {}
 };
 </script>
+<!-- 네이버 애널리틱스 (방문자 통계) -->
+<script src="https://wcs.naver.net/wcslog.js"></script>
+<script>
+if(!window.wcs_add) var wcs_add = {};
+wcs_add["wa"] = "8a9234409b1ae0";
+if(window.wcs) { wcs_do(); }
+</script>
 </body>
 </html>
